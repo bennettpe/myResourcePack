@@ -1,350 +1,374 @@
 /* Global styles */
+
+/*----------------------------------------------------
+  https://mycolor.space/
+  #4C154D =
+  #8C2A58 =
+  #C24F57 =
+  #E98152 =
+  #FBBB55 =
+  #F9F871 =
+  #0092D2 =
+  ---------------------------------------------------- */
+
 body {
-    background: linear-gradient(180deg, #4C154D 30%, #5f1960 50%, #5f1960 70%, #4C154D 100%);
-    /*background-color: #4C154D;*/
-    font-family: consolas, sans-serif;
+     background: #4C154D;
+     font-family: consolas, sans-serif;
     /* Needed for Bootstrap Scrollspy */
-    position: relative;
-
+     position: relative;
 }
 
-/* Section Margin on .about to stop from disappearing under NavBar */
-.about {
-    margin-top: 100px;
+/* Reset margins on paragraphs */
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
-/* Section margin-tops */
-.resources, .tools, .additional {
-    margin-top: 30px;
+/* Section padding-top to stop from disappearing under NavBar */
+.about, .resources, .tools, .additional {
+     padding-top: 80px;
 }
 
 /* Section header styles */
 .resource-header, .tools-header, .additional-header {
-    color: #36c5f0;
-    font-style: italic;
-    text-align: center;
+     color: #0092D2;
+     font-style: italic;
+     text-align: center;
+}
+
+.resource-tooltip, .tools-tooltip, .additional-tooltip {
+     font-size: 14px;
+     color: #FBBB55;
+     text-align: center;
 }
 
 /* Font Awesome icons before section header text styles */
 .fa-book, .fa-tools, .fa-code {
-    font-size: 32px;
-    margin: auto 8px;
-}
-
-.resource-tooltip, .tools-tooltip, .additional-tooltip {
-    font-size: 14px;
-    color: #ecb22e;
-    text-align: center;
+     font-size: 32px;
+     margin: auto 8px;
 }
 
 /* Navbar */
 .navbar {
-    margin-bottom: 0;
-    border: 0;
-    /*background: linear-gradient(180deg, #5f1960 20%, #4C154D 50%, #4C154D 80%, #5f1960 100%);*/
-    background-color: #4C154D;
-    text-align: center;
+     border: 0;
+     background-color: #8C2A58;
+     text-align: center;
 }
 
 /* Logo */
 .navbar-brand img {
-    height: 70px;
-    width: 70px;
+     height: 50px;
+     width: 50px;
 }
 
 /* About Section styles */
-    /* Fancy Border radius around image
-    & `object-fit: contain;` to ensure image scales without loss to aspect ratio */
+/* Fancy Border radius around image & `object-fit: contain;
+` to ensure image scales without loss to aspect ratio */
 .welcome-image img {
-    margin: 10px;
-    height: 200px;
-    object-fit: contain;
-    min-height: 100%;
-    max-height: none;
-    border-radius: 100% 0 100% 0 / 20% 80% 20% 80%;
-    border: 2px solid #2eb67d;
+     margin: 10px;
+     height: 200px;
+     object-fit: contain;
+     min-height: 100%;
+     max-height: none;
+     border-radius: 100% 0 100% 0 / 20% 80% 20% 80%;
+     border: 3px solid #FBBB55;
 }
 
 .welcome {
-    margin: auto 0;
+     margin: auto 0;
 }
 
 .welcome-text {
-    margin-top: 20px;
-    color: #ffffff;
-    font-size: 16px;
-    text-align: left;
+     margin-top: 20px;
+     color: #ffffff;
+     font-size: 16px;
+     text-align: center;
 }
 
 /* Block divider to simulate end of about section */
 .about::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 80%;
-    margin: 20px auto 0;
-    background: #ecb22e;
+     content: "";
+     display: block;
+     height: 1px;
+     width: 80%;
+     margin: 20px auto 0;
+     background: #ecb22e;
 }
 
 /* Resource Section Styles */
 .resource-list-header {
-    text-decoration: none;
-    list-style: none;
+     text-decoration: none;
+     list-style: none;
 }
 
 /* List item bullet styled to Slack icon */
 .resource-list-header::before {
-    content: '';
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-image: url('../assets/images/slackIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
+     content: '';
+     display: inline-block;
+     height: 20px;
+     width: 20px;
+     margin: 0 5px;
+     background-image: url('../assets/images/slackIcon.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     vertical-align: middle;
 }
 
 .resource-list-header a {
-    font-size: 18px;
-    color: #36c5f0;
+     color: #0092D2;
+     font-size: 18px;
+     text-decoration: none;
+}
+
+.resource-list-header a:hover {
+     color: #FBBB55;;
 }
 
 .li-subtext {
-    color: #ffffff;
-    padding: 0.50rem 1.25rem 0 0;
+     color: #ffffff;
+     padding: 0.25rem 1.25rem 0 2.2rem;
 }
 
 /* Block divider to simulate end of resource section */
 .resources::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 80%;
-    margin: 20px auto 0;
-    background: #ecb22e;
-}
-
-/* Card Section Styles */
-.card {
-    height: 22rem;
-    padding: 15px 0;
-    color: white;
-    justify-content: center;
-    text-align: left;
-    background-color: #4C154D;
-    border: #2eb67d 1px solid;
-    border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
-}
-
-.card-title {
-    font-size: 18px;
-    color: #36c5f0;
-    text-align: center;
-}
-
-/* Block divider to simulate end of tools section */
-.tools::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 80%;
-    margin: 20px auto 0;
-    background: #ecb22e;
+     content: "";
+     display: block;
+     height: 1px;
+     width: 80%;
+     margin: 20px auto 0;
+     background: #FBBB55;
 }
 
 /* Additiona Section Styles */
 .additional-text {
-    color: #ffffff;
-    padding: 10px 25px;
+     color: #ffffff;
+     padding: 10px 25px;
 }
 
 .additional-list-header {
-    list-style: none;
+     list-style: none;
 }
 
 .additional-list-header a {
-    color: #36c5f0;
-    font-size: 18px;
+     color: #0092D2;
+     font-size: 18px;
+     text-decoration: none;
+}
+
+.additional-list-header a:hover {
+     color: #FBBB55;;
 }
 
 .additional-list-header::before {
-    content: '';
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-image: url('../assets/images/slackIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
+     content: '';
+     display: inline-block;
+     height: 20px;
+     width: 20px;
+     margin: 0 5px;
+     background-image: url('../assets/images/slackIcon.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     vertical-align: middle;
+}
+
+/* Card Section Styles */
+.card {
+     height: 22rem;
+     padding: 15px 0;
+     color: white;
+     justify-content: center;
+     text-align: left;
+     background-color: #4C154D;
+     border: #E98152 1px solid;
+     border-radius: 2rem;
+}
+
+.card-title {
+     font-size: 18px;
+     color: #0092D2;
+     text-align: center;
+     text-decoration: none;
+}
+
+.card-title:hover {
+     color: #FBBB55;
 }
 
 /* Tool Section Styles */
 .tool-list-header {
-    list-style: none;
-    color: #36c5f0;
-    font-size: 24px;
-    padding-left: 40px;
+     list-style: none;
+     color: #0092D2;
+     font-size: 24px;
+     padding-left: 40px;
 }
 
 .tool-list-header::before {
-    content: '';
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    margin: 0 5px;
-    background-image: url('../assets/images/slackIcon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
+     content: '';
+     display: inline-block;
+     height: 30px;
+     width: 30px;
+     /* margin: 0 5px; */
+     background-image: url('../assets/images/slackIcon.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     vertical-align: middle;
+}
+
+/* Block divider to simulate end of tools section */
+.tools::after {
+     content: "";
+     display: block;
+     height: 1px;
+     width: 80%;
+     margin: 20px auto 0;
+     background: #FBBB55;
 }
 
 .quotes-header {
-    color: #ecb22e;
-    font-style: italic;
+     color: #FBBB55;
+     font-style: italic;
 }
 
 .fa-comment {
-    font-size: 18px;
-    margin: auto 8px;
+     font-size: 18px;
+     margin: auto 8px;
 }
 
 /* The flip card container - set the width and height to whatever you want.
-   We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    background-color: transparent;
-    margin: 20px auto;
-    width: 200px;
-    height: 250px;
-    border: 1px solid #2eb67d;
-    border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   We have added the border property to demonstrate that the flip itself goes out of the box on hover
+   (remove perspective if you don't want the 3D effect */
+ .flip-card {
+     background-color: transparent;
+     margin: 20px auto;
+     width: 200px;
+     height: 250px;
+     border: 1px solid #E98152;
+     border-radius: 2rem;
+     perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+     position: relative;
+     width: 100%;
+     height: 100%;
+     transition: transform 0.8s;
+     transform-style: preserve-3d;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+     transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     backface-visibility: hidden;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-    background: linear-gradient(180deg, #4C154D 30%, #5f1960 50%, #5f1960 70%, #4C154D 100%);
-    border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
-    color: #36c5f0;
-    font-size: 22px;
-    text-align: center;
+     background: linear-gradient(180deg, #4C154D 30%, #5f1960 50%, #5f1960 70%, #4C154D 100%);
+     border-radius: 2rem;
+     color: #0092D2;
+     font-size: 20px;
+     text-align: center;
 }
 
 /* Style the back side */
 .flip-card-back {
-    background-color: #2eb67d;
-    color: #000000;
-    font-size: 16px;
-    text-align: center;
-    font-style: italic;
-    border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
-    transform: rotateY(180deg);
+     background-color: #0092D2;
+     color: #000000;
+     font-size: 16px;
+     text-align: center;
+     font-style: italic;
+     border-radius: 2rem;
+     transform: rotateY(180deg);
 }
 
 .quote-owner {
-    height: 250px;
-    line-height: 250px;
+     height: 250px;
+     line-height: 250px;
 }
 
 .quote {
-    margin: 20px 5px 20px 5px;
+     margin: 20px 5px 20px 5px;
 }
 
 .additional::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 80%;
-    margin: 20px auto 0;
-    background: #ecb22e;
+     content: "";
+     display: block;
+     height: 1px;
+     width: 80%;
+     margin: 20px auto 0;
+     background: #FBBB55;
 }
 
 /* Footer */
-
 footer {
-    width: 100%;
-    height: 80px;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    background-color: #4C154D;
-    color: #36c5f0;
-    padding: 15px 0;
+     width: 100%;
+     height: 80px;
+     bottom: 0;
+     left: 0;
+     text-align: center;
+     background-color: #4C154D;
+     color: #36c5f0;
+     padding: 15px 0;
 }
 
 .copyright {
-    color: #ffffff;
-    font-size: 14px;
-    font-style: italic;
-    line-height: 25%;
+     color: #ffffff;
+     font-size: 14px;
+     font-style: italic;
+     line-height: 25%;
 }
 
 /* ----- Changes to Back To Top Button ----- */
 /* Back to top button */
 .bttop {
-    width: 65px;
-    background: #36c5f0;
-    position: fixed;
-    right: -9px;
-    bottom: 33px;
-    z-index: 9998;
-    border: 2px solid #fff;
-    border-radius: 10px;
+     width: 65px;
+     background: #36c5f0;
+     position: fixed;
+     right: -9px;
+     bottom: 33px;
+     z-index: 9998;
+     border: 2px solid #fff;
+     border-radius: 10px;
 }
 
 .bttop i {
-    color: #4C154D;
-    font-size: 35px;
-    padding: 7px;
+     color: #4C154D;
+     font-size: 35px;
+     padding: 7px;
 }
 
 /* Media Queries */
-    /* Set max-width for cards on mobile view */
+/* Set max-width for cards on mobile view */
 @media (max-width: 576px) {
-    .bttop {
-        width: 40px;
-    }
+     .bttop {
+          width: 40px;
+     }
 
-    .bttop i {
-       font-size: 17px;
-    }
+     .bttop i {
+          font-size: 17px;
+     }
 
-    .card {
-        max-width: 300px;
-        margin: 10px auto;
-    }
+     .card {
+          max-width: 300px;
+          margin: 10px auto;
+     }
 
-    .resource-tooltip, .tools-tooltip, .additional-tooltip {
-    font-size: 10px;
-    }
+     .resource-tooltip, .tools-tooltip, .additional-tooltip {
+          font-size: 10px;
+     }
 }
-
 /* For Extra Large Devices */
 @media (min-width: 1200px) {
-    .card {
-        height: 28rem;
-    }
+     .card {
+          height: 28rem;
+     }
 }
