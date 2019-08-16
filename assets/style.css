@@ -26,7 +26,7 @@ p {
 
 /* Section padding-top to stop from disappearing under NavBar */
 .about, .resources, .tools, .additional {
-     padding-top: 80px;
+     padding-top: 100px;
 }
 
 /* Section header styles */
@@ -57,8 +57,8 @@ p {
 
 /* Logo */
 .navbar-brand img {
-     height: 50px;
-     width: 50px;
+     height: 70px;
+     width: 70px;
 }
 
 /* About Section styles */
@@ -117,11 +117,11 @@ p {
 .resource-list-header a {
      color: #0092D2;
      font-size: 18px;
-     text-decoration: none;
+     text-align: center;
 }
 
 .resource-list-header a:hover {
-     color: #FBBB55;;
+     color: #FBBB55;
 }
 
 .li-subtext {
@@ -156,7 +156,7 @@ p {
 }
 
 .additional-list-header a:hover {
-     color: #FBBB55;;
+     color: #FBBB55;
 }
 
 .additional-list-header::before {
@@ -187,14 +187,29 @@ p {
      font-size: 18px;
      color: #0092D2;
      text-align: center;
-     text-decoration: none;
 }
 
 .card-title:hover {
      color: #FBBB55;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /* Tool Section Styles */
+.tools-header::before {
+     content: '';
+     display: inline-block;
+     height: 50px;
+     width: 50px;
+     margin: 0 5px;
+     background-image: url('../assets/images/tools-illustration.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     vertical-align: middle;
+}
+
 .tool-list-header {
      list-style: none;
      color: #0092D2;
@@ -207,7 +222,6 @@ p {
      display: inline-block;
      height: 30px;
      width: 30px;
-     /* margin: 0 5px; */
      background-image: url('../assets/images/slackIcon.png');
      background-size: contain;
      background-repeat: no-repeat;
